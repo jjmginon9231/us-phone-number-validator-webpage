@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+/* || RESET */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+input,
+button {
+    font-family: inherit;
+}
+
+/* || GENERAL STYLES */
+
+html {
+    font-family: "Lato", sans-serif;
+}
+
+body {
+    display: flex;
+    padding: 0 8px;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: radial-gradient(#6a82fb, #111);
+}
+
+label {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #111;
+}
+
+::selection {
+    color: #fdfdfd;
+    background: #6a82fb;
+}
+
+/* || MAIN */
+
+.container {
+    max-width: 500px;
+    background: #fdfdfd;
+    border-radius: 8px;
+    padding: 20px 24px 16px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+}
+
+header h1 {
+    text-align: center;
+    color: #111;
+}
+
+.inputs {
+    margin: 20px 0 28px;
+}
+
+.inputs input {
+    width: 100%;
+    height: 60px;
+    outline: none;
+    padding: 0 16px;
+    font-size: 20px;
+    border-radius: 8px;
+    border: 1px solid #999;
+    transition: 0.1s ease-in-out;
+}
+
+.inputs input:focus {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.13);
+}
+
+.inputs button {
+    width: 100%;
+    height: 60px;
+    border: none;
+    outline: none;
+    color: #fdfdfd;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    border-radius: 8px;
+    background: radial-gradient(hsl(230, 95%, 65%), #333);
+    transition: opacity 0.2s ease-in-out;
+}
+
+.inputs button:hover,
+.inputs button:focus-visible {
+    background: radial-gradient(hsl(230, 95%, 80%), hsl(0, 0%, 17%));
+}
+
+.inputs button:active {
+    filter: brightness(70%);
+}
+
+/* || FOOTER */
+
+.results-div {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* || MEDIA QUERY */
+
+@media (max-width: 520px) {
+    .container {
+        padding: 16px 20px 8px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    .inputs input {
+        height: 52px;
+        font-size: 16px;
+    }
+
+    .inputs button {
+        height: 48px;
+        font-size: 16px;
+        margin-top: 16px;
+    }
+
+    .result {
+        font-size: 16px;
+    }
+}
